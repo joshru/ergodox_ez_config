@@ -29,7 +29,30 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-  [0] = LAYOUT_ergodox(KC_ESCAPE,KC_1,KC_2,KC_3,KC_4,KC_5,KC_GRAVE,KC_TAB,KC_Q,KC_W,KC_E,KC_R,KC_T,KC_DELETE,KC_CAPSLOCK,KC_A,KC_S,KC_D,KC_F,KC_G,KC_LSPO,KC_Z,KC_X,KC_C,KC_V,KC_B,KC_LBRACKET,KC_LCTL,KC_LALT,LALT(KC_LSHIFT),KC_LEFT,KC_RIGHT,LCTL(KC_Z),LCTL(LSFT(KC_Z)),TD(TD_CUT_COPY),KC_BSPACE,GUI_T(KC_NO),LCTL(KC_V),KC_EQUAL,KC_6,KC_7,KC_8,KC_9,KC_0,KC_MINUS,TG(1),KC_Y,KC_U,KC_I,KC_O,KC_P,KC_BSLASH,KC_H,KC_J,KC_K,KC_L,LT(2,KC_SCOLON),GUI_T(KC_QUOTE),KC_RBRACKET,KC_N,KC_M,KC_COMMA,KC_DOT,RCTL_T(KC_SLASH),KC_RSPC,KC_UP,KC_DOWN,KC_LEFT,KC_RIGHT,MO(1),KC_HOME,KC_END,KC_PGUP,KC_PGDOWN,KC_ENTER,KC_SPACE),
+  [0] = LAYOUT_ergodox(
+    // left hand
+    KC_ESCAPE,   KC_1,    KC_2,            KC_3,    KC_4,     KC_5, KC_GRAVE,
+    KC_TAB,      KC_Q,    KC_W,            KC_E,    KC_R,     KC_T, KC_DELETE,
+    KC_CAPSLOCK, KC_A,    KC_S,            KC_D,    KC_F,     KC_G,
+    KC_LSPO,     KC_Z,    KC_X,            KC_C,    KC_V,     KC_B, KC_LBRACKET,
+    KC_LCTL,     KC_LALT, LALT(KC_LSHIFT), KC_LEFT, KC_RIGHT,
+    
+                                                                           LCTL(KC_Z),   LCTL(LSFT(KC_Z)),
+                                                                                         TD(TD_CUT_COPY),
+                                                               KC_BSPACE,  GUI_T(KC_NO), LCTL(KC_V),
+                                                    
+    // right hand                                                
+    KC_EQUAL,    KC_6,    KC_7,    KC_8,     KC_9,            KC_0,             KC_MINUS,
+    TG(1),       KC_Y,    KC_U,    KC_I,     KC_O,            KC_P,             KC_BSLASH,
+    KC_H,        KC_J,    KC_K,    KC_L,     LT(2,KC_SCOLON), GUI_T(KC_QUOTE),
+    KC_RBRACKET, KC_N,    KC_M,    KC_COMMA, KC_DOT,          RCTL_T(KC_SLASH), KC_RSPC,
+    KC_UP,       KC_DOWN, KC_LEFT, KC_RIGHT, MO(1),
+    
+    KC_HOME,   KC_END,
+    KC_PGUP,
+    KC_PGDOWN, KC_ENTER, KC_SPACE
+    
+  ),
 
   [1] = LAYOUT_ergodox(KC_ESCAPE,KC_F1,KC_F2,KC_F3,KC_F4,KC_F5,KC_TRANSPARENT,KC_TRANSPARENT,KC_EXLM,KC_AT,KC_LCBR,KC_RCBR,KC_PIPE,KC_TRANSPARENT,KC_TRANSPARENT,KC_HASH,KC_DLR,KC_LPRN,KC_RPRN,KC_GRAVE,KC_LSHIFT,KC_PERC,KC_CIRC,KC_LBRACKET,KC_RBRACKET,KC_TILD,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,LCTL(KC_Z),LCTL(LSFT(KC_Z)),LCTL(KC_C),KC_BSPACE,KC_LGUI,LCTL(KC_Z),KC_TRANSPARENT,KC_F6,KC_F7,KC_F8,KC_F9,KC_F10,KC_F11,KC_TRANSPARENT,KC_UP,KC_7,KC_8,KC_9,KC_ASTR,KC_F12,KC_DOWN,KC_4,KC_5,KC_6,KC_PLUS,KC_TRANSPARENT,KC_TRANSPARENT,KC_AMPR,KC_1,KC_2,KC_3,KC_BSLASH,KC_RSHIFT,KC_0,KC_0,KC_DOT,KC_EQUAL,KC_TRANSPARENT,KC_HOME,KC_END,KC_PGUP,KC_PGDOWN,KC_ENTER,KC_SPACE),
 
