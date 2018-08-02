@@ -20,11 +20,15 @@ enum custom_keycodes {
 };
 
 enum {
-  TD_CUT_COPY = 0
+  TD_CUT_COPY = 0,
+  TD_PASTE
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-  [ TD_CUT_COPY ] = ACTION_TAP_DANCE_DOUBLE( LCTL(KC_C), LCTL(KC_X) )
+  // copy on press, cut on double tap
+  [ TD_CUT_COPY ] = ACTION_TAP_DANCE_DOUBLE( LCTL(KC_C), LCTL(KC_X) ),
+  // paste on press, shift + paste for clipboard pasting on double tap
+  [ TD_PASTE ] = ACTION_TAP_DANCE_DOUBLE( LCTL(KC_V), LSFT( LCTL( KC_V ) ) )
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -39,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
                                                                            LCTL(KC_Z),   LCTL(LSFT(KC_Z)),
                                                                                          TD(TD_CUT_COPY),
-                                                               KC_BSPACE,  GUI_T(KC_NO), LCTL(KC_V),
+                                                               KC_BSPACE,  GUI_T(KC_NO), TD(TD_PASTE),
                                                     
     // right hand                                                
     KC_EQUAL,    KC_6,    KC_7,    KC_8,     KC_9,            KC_0,             KC_MINUS,
