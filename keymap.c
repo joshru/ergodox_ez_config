@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,      KC_Q,    KC_W,            KC_E,    KC_R,     KC_T, KC_DELETE,
     KC_NLCK,     KC_A,    KC_S,            KC_D,    KC_F,     KC_G,
     KC_LSPO,     KC_Z,    KC_X,            KC_C,    KC_V,     KC_B, KC_LBRACKET,
-    KC_LCTL,     KC_LALT, LALT(KC_LSHIFT), KC_LEFT, KC_RIGHT,
+    KC_LCTL,     KC_LALT, TG(2),           KC_LEFT, KC_RIGHT,
     
                                                                            LCTL(KC_Z),   LCTL(LSFT(KC_Z)),
                                                                                          TD(TD_CUT_COPY),
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // right hand
     KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,  KC_TRANSPARENT,       KC_TRANSPARENT,       KC_TRANSPARENT,       KC_TRANSPARENT,
     KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,  KC_TRANSPARENT,       KC_TRANSPARENT,       KC_TRANSPARENT,       KC_TRANSPARENT,
-                      KC_TRANSPARENT,     KC_TRANSPARENT,  KC_TRANSPARENT,       KC_TRANSPARENT,       KC_TRANSPARENT,       KC_NUMLOCK,
+                      KC_TRANSPARENT,     KC_TRANSPARENT,  KC_BTN1,              KC_TRANSPARENT,       KC_TRANSPARENT,       KC_NUMLOCK,
     KC_TRANSPARENT,   KC_TRANSPARENT,     KC_TRANSPARENT,  KC_MEDIA_PREV_TRACK,  KC_MEDIA_NEXT_TRACK,  KC_MEDIA_PLAY_PAUSE,  KC_TRANSPARENT,
     KC_AUDIO_VOL_UP,  KC_AUDIO_VOL_DOWN,  KC_AUDIO_MUTE,   KC_TRANSPARENT,       KC_TRANSPARENT,
     
